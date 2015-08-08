@@ -1,0 +1,140 @@
+html, body{
+        margin:0; 
+        padding:0; 
+        height:100%;
+    }
+
+body{
+	background-color: #2196f3;
+	
+}
+
+.clearfix{
+	clear: both;
+}
+
+header{
+	height: 10%;
+	min-height: 75px;
+	margin-bottom: 25px;
+	position: relative;
+	text-align: center;
+}
+
+header .tdl_title{
+	color: white;
+}
+
+header .pwr_btn{
+	height: 75px;
+	width: 75px;
+	position: absolute;
+	color: white;
+	left: 25px;
+	top: 5px;
+	border-radius: 100px;	
+	text-align: center;
+	cursor: pointer;
+	z-index: 1;
+	transition: all 0.1s ease-in-out;
+}
+
+header .pwr_btn .material-icons{
+	margin-left: 7px;
+}
+
+header .tdl_title{
+	font-family: roboto;
+	font-size: 35px;
+	top: 10px;
+	display: none;
+}
+
+.container .tdl_wrapper{
+	height: 75%;
+}
+
+.list_wrapper{
+	height: 80vh;
+}	
+
+.to_do_list{
+	height: 80vh;
+	max-height: 80vh;
+	overflow: auto;
+}
+
+.to_do_list .remove{
+	font-size: 18px;
+	position: relative;
+	
+}
+
+
+.check{
+	color: #558b2f;
+	font-size: 3em;
+	text-shadow: 1px 1px 2px  #212121;
+	transition: all 0.1s ease-in-out;
+}
+
+.check:hover{
+	text-shadow: 0 0 0 #212121 ;
+	cursor: pointer;
+}
+
+.btn_wrapper{
+	position: relative;
+}
+
+.add_btn{
+	height: 75px;
+	width: 75px;
+	top: 35px;
+	border-radius: 100px;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	transition: box-shadow 0.1s ease-in-out, width 0.5s ease-in-out;
+}
+
+.add_btn.active{
+	width: 380px;
+}
+
+.add_btn .material-icons{
+	margin-left: 7.5px;
+}
+
+#tdl_input{
+	position: absolute;
+	top: 45px;
+	left: 40px;
+	color: white;
+	display: none;
+}
+
+
+footer{
+	position: absolute;
+	height: 90%;
+	width: 100%;
+	bottom: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+footer.active{
+	position: absolute;
+	height: 5%;
+	width: 100%;
+	bottom: 0;
+}
+
+footer .done{
+	position: relative;
+	left: 90%;
+	top: 5px;
+	opacity: 0;
+}
+
