@@ -17,21 +17,17 @@ header{
 	height: 10%;
 	min-height: 75px;
 	margin-bottom: 25px;
-	position: relative;
 	text-align: center;
 }
 
-header .tdl_title{
-	color: white;
-}
 
 header .pwr_btn{
 	height: 75px;
 	width: 75px;
 	position: absolute;
 	color: white;
-	left: 25px;
-	top: 5px;
+	left: 50%;
+	top: 45%;
 	border-radius: 100px;	
 	text-align: center;
 	cursor: pointer;
@@ -44,6 +40,7 @@ header .pwr_btn .material-icons{
 }
 
 header .tdl_title{
+	color: white;
 	font-family: roboto;
 	font-size: 35px;
 	top: 10px;
@@ -56,6 +53,7 @@ header .tdl_title{
 
 .list_wrapper{
 	height: 80vh;
+	position: relative;
 }	
 
 .to_do_list{
@@ -81,6 +79,22 @@ header .tdl_title{
 .check:hover{
 	text-shadow: 0 0 0 #212121 ;
 	cursor: pointer;
+}
+
+.clear_all{
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	position: absolute;
+	bottom: 1%;
+	left: 85%;
+	z-index: 0;
+	display: none;
+}
+
+.clear_all .clear_all_icon{
+	margin-top: 7px;
+	font-size: 35px;
 }
 
 .btn_wrapper{

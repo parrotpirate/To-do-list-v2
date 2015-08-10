@@ -1,4 +1,14 @@
 jQuery(document).ready(function($){
+	
+// Hide 'CLEAR ALL' BUTTON WHEN NO LIST ITEMS PRESENT
+function removeAllHide(){
+	var x = $('.remove').length;
+	if(x >= 1){
+		$('.clear_all').fadeIn(250);
+	} else{
+		$('.clear_all').fadeOut();
+	}
+}
 
 // Power button 
 
@@ -13,12 +23,13 @@ $('.pwr_btn').mouseleave(function(){
 });
 
 $('.pwr_btn').click(function(){
-	$('.pwr_btn').animate({opacity: 0}, 250, 'swing', function(){
+	$('.pwr_btn').animate({opacity: 0}, 250, 'swing').delay(250).queue(function(next){
 		$('footer').addClass('active');
 		$('header').addClass('z-depth-2');
 		$('footer').addClass('z-depth-2');
 		$('.tdl_title').delay(500).fadeIn(1000);
 		$('.done').delay(500).animate({opacity: 1}, 500, 'swing');
+		next();
 	});
 });
 
@@ -36,7 +47,9 @@ $('.add_btn').mouseleave(function(){
 $('.add_btn').click(function(){
 	$('.add_btn .material-icons').fadeOut();
 	$('.add_btn').delay(250).addClass('active');
-	$('#tdl_input').delay(500).fadeIn(750);
+	$('#tdl_input').delay(500).fadeIn(0, function(){
+		$(this).focus();
+	});
 });
 
 
@@ -51,19 +64,32 @@ $('#tdl_input').keypress(function(e){
 		$('.to_do_list').append('<li class="remove valign-wrapper card-panel lime"><i class="material-icons check">done</i>' + " " + " " + listItemEntry + "</li>");
 		$('.remove').last().fadeOut(0);
 		$('.remove').last().fadeIn(500);
+		removeAllHide();
 		// REMOVE BUTTON
 		$('.check').click(function(){
 			var removeItem = $(this).parent();
 			$(removeItem).animate({left: "-500px", opacity: 0}, 500, "swing", function(){
 				$(this).remove();
+				removeAllHide();
 			});
-			// $(removeItem).slideToggle(250, function(){
-			// 	$(this).remove();
-			// });
+			
 		});
 	}
 });
 
+// CLEAR ALL BUTTON
+$('.clear_all').click(function removeAll(){
+	$('.clear_all').fadeOut();
+    $('.remove').reverse().each(function(i) {
+		$(this).delay((i++) * 100).animate({
+        	left: '-500px', opacity: 0
+   			}, 500, 'swing', function(){
+    			$(this).remove();
+    		});
+	});
+});
+
+// DONE BUTTON
 $('.done').click(function(){
 	$(this).animate({opacity: 0}, 250, 'swing', function(){
 		$('.tdl_title').fadeOut(500);
@@ -78,15 +104,6 @@ $('.done').click(function(){
 
 
 
-function removeAll(){
-    $('.remove').each(function(i) {
-$(this).delay((i++) * 100).animate({
-        left: '-500px', opacity: 0
-    }, 500, 'swing', function(){
-        $(this).remove();
-    });
-});
-}
 
 
 
