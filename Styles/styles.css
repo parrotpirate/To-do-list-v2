@@ -49,25 +49,21 @@ header .tdl_title{
 	display: none;
 }
 
-/*.container .tdl_wrapper{
-	height: 75%;
-}*/
-
 .list_wrapper{
-	height: 75vh;
-	/*position: relative;*/
+	height: 80vh;
+	max-height: 80vh;
+	position: relative;
 }	
 
 .to_do_list{
-	height: 75vh;
-	max-height: 75vh;
+	height: 100%;
 	overflow: auto;
-	/*position: relative;*/
+	position: relative;
 }
 
 .to_do_list .remove{
 	font-size: 18px;
-	/*position: relative;*/
+	position: relative;
 	
 }
 
@@ -89,8 +85,9 @@ header .tdl_title{
 	width: 50px;
 	border-radius: 100%;
 	position: relative;
-	bottom: 12%;
-	left: 85%;
+	bottom: 70px;
+	right: 5px;
+	float: right;
 	z-index: 0;
 	display: none;
 }
@@ -135,7 +132,7 @@ header .tdl_title{
 
 
 footer{
-	position: absolute;
+	position: fixed;
 	height: 90%;
 	width: 100%;
 	bottom: 0;
@@ -143,7 +140,7 @@ footer{
 }
 
 footer.active{
-	position: absolute;
+	position: fixed;
 	height: 5%;
 	min-height: 45px;
 	width: 100%;
