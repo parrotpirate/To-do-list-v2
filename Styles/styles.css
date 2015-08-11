@@ -1,13 +1,15 @@
-html, body{
+html{
+	height: 100%;
+	width: 100%;
+} 
+
+body{
         margin:0; 
         padding:0; 
         height:100%;
+        width: 100%;
+        background-color: #2196f3;
     }
-
-body{
-	background-color: #2196f3;
-	
-}
 
 .clearfix{
 	clear: both;
@@ -52,19 +54,20 @@ header .tdl_title{
 }*/
 
 .list_wrapper{
-	height: 80vh;
-	position: relative;
+	height: 75vh;
+	/*position: relative;*/
 }	
 
 .to_do_list{
-	height: 80vh;
-	max-height: 80vh;
+	height: 75vh;
+	max-height: 75vh;
 	overflow: auto;
+	/*position: relative;*/
 }
 
 .to_do_list .remove{
 	font-size: 18px;
-	position: relative;
+	/*position: relative;*/
 	
 }
 
@@ -123,6 +126,7 @@ header .tdl_title{
 
 #tdl_input{
 	position: absolute;
+	width: 320px;
 	top: 45px;
 	left: 40px;
 	color: white;
