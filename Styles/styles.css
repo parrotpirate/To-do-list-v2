@@ -47,9 +47,9 @@ header .tdl_title{
 	display: none;
 }
 
-.container .tdl_wrapper{
+/*.container .tdl_wrapper{
 	height: 75%;
-}
+}*/
 
 .list_wrapper{
 	height: 80vh;
@@ -85,8 +85,8 @@ header .tdl_title{
 	height: 50px;
 	width: 50px;
 	border-radius: 100%;
-	position: absolute;
-	bottom: 1%;
+	position: relative;
+	bottom: 12%;
 	left: 85%;
 	z-index: 0;
 	display: none;
@@ -141,6 +141,7 @@ footer{
 footer.active{
 	position: absolute;
 	height: 5%;
+	min-height: 45px;
 	width: 100%;
 	bottom: 0;
 }

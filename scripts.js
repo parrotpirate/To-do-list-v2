@@ -10,6 +10,12 @@ function removeAllHide(){
 	}
 }
 
+// PLAY BUTTON CLICK SOUND
+function playAudio(){
+	var audio = $("#click_sound")[0];
+	audio.play();
+}
+
 // Power button 
 
 $('.pwr_btn').mouseenter(function(){
@@ -31,6 +37,7 @@ $('.pwr_btn').click(function(){
 		$('.done').delay(500).animate({opacity: 1}, 500, 'swing');
 		next();
 	});
+	playAudio();
 });
 
 // Add button
@@ -50,6 +57,7 @@ $('.add_btn').click(function(){
 	$('#tdl_input').delay(500).fadeIn(0, function(){
 		$(this).focus();
 	});
+	playAudio();
 });
 
 
@@ -72,7 +80,7 @@ $('#tdl_input').keypress(function(e){
 				$(this).remove();
 				removeAllHide();
 			});
-			
+			playAudio();
 		});
 	}
 });
@@ -87,6 +95,7 @@ $('.clear_all').click(function removeAll(){
     			$(this).remove();
     		});
 	});
+	playAudio();
 });
 
 // DONE BUTTON
@@ -98,6 +107,7 @@ $('.done').click(function(){
 		$('footer').delay(500).removeClass('active');
 		$('.pwr_btn').delay(1000).animate({opacity: 1}, 500, 'swing');
 	});
+	playAudio();
 });
 
 
