@@ -133,8 +133,28 @@ header .tdl_title{
 }
 
 .item_counter{
-	height: 10px;
-	width: 10px;
+	height: auto;
+	width: auto;
+	background-color: #00897b;
+	color: white;
+	float: left;
+	border-radius: 10px;
+	position: relative;
+	top: 150px;
+	left: 20px;
+	display: none;
+}
+
+.item_counter_p{
+	padding: 5px 10px;
+}
+
+.item_counter_icon{
+	background-color: #fb8c00;
+	color: white;
+	margin: 5px;
+	padding-left: 5px;
+	border-radius: 25%;
 }
 
 footer{

@@ -12,10 +12,12 @@ function removeAllHide(){
 
 function counter(){
 	var x = $('.remove').length;
-	if(x > 0){
-		$('.item_counter').html('<p class="item_counter_p"><span class="item_counter_icon">' + x + ' </span>items in list.</p>');
+	if(x > 1){
+		$('.item_counter').html('<p class="item_counter_p"><span class="item_counter_icon z-depth-2">' + x + ' </span>items in list.</p>');
+	} else if(x === 1){
+		$('.item_counter').html('<p class="item_counter_p"><span class="item_counter_icon z-depth-2">' + x + ' </span>item in list.</p>').fadeIn(500);
 	} else {
-		$('.item_counter').html("<p class = 'item_counter_p'>Congrats!  You've completed your list.");
+		$('.item_counter').html("<p class = 'item_counter_p'>Congrats! You've completed your list.").delay(3000).fadeOut(500);
 	}
 }
 
@@ -82,12 +84,14 @@ $('#tdl_input').keypress(function(e){
 		$('.remove').last().fadeOut(0);
 		$('.remove').last().fadeIn(500);
 		removeAllHide();
+		counter();
 		// REMOVE BUTTON
 		$('.check').click(function(){
 			var removeItem = $(this).parent();
 			$(removeItem).animate({left: "-500px", opacity: 0}, 500, "swing", function(){
 				$(this).remove();
 				removeAllHide();
+				counter();
 			});
 			playAudio();
 		});
@@ -102,6 +106,7 @@ $('.clear_all').click(function removeAll(){
         	left: '-500px', opacity: 0
    			}, 500, 'swing', function(){
     			$(this).remove();
+    			counter();
     		});
 	});
 	playAudio();
