@@ -10,6 +10,13 @@ function removeAllHide(){
 	}
 }
 
+function counter(){
+	var x = $('.remove').length;
+	if(x > 0){
+		$('.item_counter').html('<p><span>' + x + ' </span>items in list.</p>');
+	}
+}
+
 // PLAY BUTTON CLICK SOUND
 function playAudio(){
 	var audio = $("#click_sound")[0];

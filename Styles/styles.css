@@ -63,6 +63,8 @@ header .tdl_title{
 
 .to_do_list .remove{
 	font-size: 18px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	position: relative;
 	
 }
@@ -130,6 +132,10 @@ header .tdl_title{
 	display: none;
 }
 
+.item_counter{
+	height: 10px;
+	width: 10px;
+}
 
 footer{
 	position: fixed;
