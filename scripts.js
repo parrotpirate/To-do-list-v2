@@ -13,7 +13,9 @@ function removeAllHide(){
 function counter(){
 	var x = $('.remove').length;
 	if(x > 0){
-		$('.item_counter').html('<p><span>' + x + ' </span>items in list.</p>');
+		$('.item_counter').html('<p class="item_counter_p"><span class="item_counter_icon">' + x + ' </span>items in list.</p>');
+	} else {
+		$('.item_counter').html("<p class = 'item_counter_p'>Congrats!  You've completed your list.");
 	}
 }
 
